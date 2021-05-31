@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "UserManager";
+
+import "google/protobuf/timestamp.proto";
+
+service Service{
+	rpc GetUserStream (UserRequest) returns (stream UserResponse);
+}
+
+message UserRequest{
+	string userName = 1;
+	string message = 2;
+}
+
+message UserResponse{
+	google.protobuf.Timestamp dateTimeStamp = 1;
+	string userName = 2;
+	string message = 3;
+}

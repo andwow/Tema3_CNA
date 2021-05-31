@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UserManager.Services;
 
 namespace UserService
 {
@@ -31,7 +32,7 @@ namespace UserService
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<UserServiceManager>();
 
                 endpoints.MapGet("/", async context =>
                 {

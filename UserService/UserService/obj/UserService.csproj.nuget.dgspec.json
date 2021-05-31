@@ -40,9 +40,29 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Google.Apis.Admin.Directory.directory_v1": {
+              "target": "Package",
+              "version": "[1.51.0.2329, )"
+            },
             "Grpc.AspNetCore": {
               "target": "Package",
-              "version": "[2.27.0, )"
+              "version": "[2.37.0, )"
+            },
+            "Microsoft.AspNet.Identity.Core": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.Azure.Cosmos": {
+              "target": "Package",
+              "version": "[3.19.0, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[3.33.0, )"
             }
           },
           "imports": [

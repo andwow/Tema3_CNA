@@ -3,27 +3,23 @@ using Grpc.Core;
 using System;
 using System.Threading.Tasks;
 
-namespace UserManager.Services
+namespace UserService
 {
-    public class UserServiceManager : Service.ServiceBase
+    public class UserServiceManager : UserServiceAddMessage.UserServiceAddMessageBase
     {
         public override async Task GetUserStream(UserRequest request, IServerStreamWriter<UserResponse> responseStream, ServerCallContext context)
         {
-            Random random = new Random();
-
             try
             {
                 while (!context.CancellationToken.IsCancellationRequested)
                 {
                     await Task.Delay(2000);
-
                     var weatherData = new UserResponse()
                     {
                         DateTimeStamp = Timestamp.FromDateTime(DateTime.UtcNow),
-                        UserName = "dacac",
-                        Message = "dasdadasd"
+                        UserName = request.UserName,
+                        Message = request.Message
                     };
-
                     await responseStream.WriteAsync(weatherData);
                 }
             }

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\repos\\CNA\\tema3CNA\\Tema3_CNA\\UserClient\\UserClient\\UserClient.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\Tema3_CNA\\UserClient\\UserClient\\UserClient.csproj": {}
+  },
+  "projects": {
+    "D:\\Tema3_CNA\\UserClient\\UserClient\\UserClient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Tema3_CNA\\UserClient\\UserClient\\UserClient.csproj",
+        "projectName": "UserClient",
+        "projectPath": "D:\\Tema3_CNA\\UserClient\\UserClient\\UserClient.csproj",
+        "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
+        "outputPath": "D:\\Tema3_CNA\\UserClient\\UserClient\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 6ab796ac4493d3553538493d4e893507fad44170
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +87,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+>>>>>>> 6ab796ac4493d3553538493d4e893507fad44170
         }
       }
     }

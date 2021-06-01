@@ -25,6 +25,9 @@ namespace UserServiceClient
                 var option = Console.ReadLine();
                 switch (option)
                 {
+                    default:
+                        Console.Write("Invalid option please insert a valid option.\n");
+                        break;
                     case "1":
                         Console.Write("Message: ");
                         var message = Console.ReadLine();
@@ -35,7 +38,7 @@ namespace UserServiceClient
                         var dataStream = client.GetUserStream(new Empty());
                         foreach (var value in dataStream.ListOfMessage)
                         {
-                            Console.WriteLine($"{value.DateTime}:{value.UserName} : {value.Message}");
+                            Console.WriteLine($"{value.DateTime}: {value.UserName} : {value.Message}");
                         }
                         break;
                     case "3":

@@ -1,4 +1,4 @@
 obj\Debug\netcoreapp3.1\Protos/Service.cs \
-obj\Debug\netcoreapp3.1\Protos/ServiceGrpc.cs: C:/Users/bumbl/.nuget/packages/grpc.tools/2.38.0/build/native/include/google/protobuf/empty.proto\
- C:/Users/bumbl/.nuget/packages/grpc.tools/2.38.0/build/native/include/google/protobuf/timestamp.proto\
+obj\Debug\netcoreapp3.1\Protos/ServiceGrpc.cs: C:/Users/Andrei/.nuget/packages/grpc.tools/2.38.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/Andrei/.nuget/packages/grpc.tools/2.38.0/build/native/include/google/protobuf/timestamp.proto\
  Protos/service.proto

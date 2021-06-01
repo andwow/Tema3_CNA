@@ -57,17 +57,19 @@ namespace UserService
         }
         public override Task<Empty> UserConnected(UserConnect userRequest, ServerCallContext context)
         {
-            
+            _logger.LogInformation(root, $"{userRequest.UserName} has connected.");
             Console.WriteLine($"{userRequest.UserName} has connected.");
             return Task.FromResult(new Empty());
         }
         public override Task<Empty> UserDisconnected(UserDisconnect userRequest, ServerCallContext context)
         {
+            _logger.LogInformation($"{userRequest.UserName} has disconnected.");
             Console.WriteLine($"{userRequest.UserName} has disconnected.");
             return Task.FromResult(new Empty());
         }
         public override Task<UserResponse> GetUserStream(Empty _, ServerCallContext context)
         {
+            _logger.LogInformation(root, "Get User Messages");
             UserResponse userResponse = new UserResponse();
             for (int index = 0; index < array.Count(); ++index)
             {

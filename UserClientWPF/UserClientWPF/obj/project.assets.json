@@ -326,19 +326,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Stefan\\.nuget\\packages\\": {}
+    "C:\\Users\\Andrei\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\repos\\CNA\\Tema3_CNA-main\\UserClientWPF\\UserClientWPF\\UserClientWPF.csproj",
+      "projectUniqueName": "D:\\Tema3_CNA\\UserClientWPF\\UserClientWPF\\UserClientWPF.csproj",
       "projectName": "UserClientWPF",
-      "projectPath": "E:\\repos\\CNA\\Tema3_CNA-main\\UserClientWPF\\UserClientWPF\\UserClientWPF.csproj",
-      "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-      "outputPath": "E:\\repos\\CNA\\Tema3_CNA-main\\UserClientWPF\\UserClientWPF\\obj\\",
+      "projectPath": "D:\\Tema3_CNA\\UserClientWPF\\UserClientWPF\\UserClientWPF.csproj",
+      "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
+      "outputPath": "D:\\Tema3_CNA\\UserClientWPF\\UserClientWPF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -397,7 +397,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

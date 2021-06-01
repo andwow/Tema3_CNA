@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\repos\\CNA\\Tema3_CNA-main\\UserClient\\UserClient\\UserClient.csproj": {}
+    "D:\\Tema3_CNA\\UserClient\\UserClient\\UserClient.csproj": {}
   },
   "projects": {
-    "E:\\repos\\CNA\\Tema3_CNA-main\\UserClient\\UserClient\\UserClient.csproj": {
+    "D:\\Tema3_CNA\\UserClient\\UserClient\\UserClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\repos\\CNA\\Tema3_CNA-main\\UserClient\\UserClient\\UserClient.csproj",
+        "projectUniqueName": "D:\\Tema3_CNA\\UserClient\\UserClient\\UserClient.csproj",
         "projectName": "UserClient",
-        "projectPath": "E:\\repos\\CNA\\Tema3_CNA-main\\UserClient\\UserClient\\UserClient.csproj",
-        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-        "outputPath": "E:\\repos\\CNA\\Tema3_CNA-main\\UserClient\\UserClient\\obj\\",
+        "projectPath": "D:\\Tema3_CNA\\UserClient\\UserClient\\UserClient.csproj",
+        "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
+        "outputPath": "D:\\Tema3_CNA\\UserClient\\UserClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

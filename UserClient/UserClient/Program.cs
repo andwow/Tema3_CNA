@@ -16,7 +16,9 @@ namespace UserServiceClient
             var client = new UserServiceAddMessage.UserServiceAddMessageClient(channel);
             Console.Write("Username: ");
             var userName = Console.ReadLine();
+            client.UserConnected(new UserConnect {UserName=userName});
             var cancellationToken = new CancellationTokenSource(Timeout.Infinite);
+            Console.Write("Option 1:Write a message;\nOption 2:Read chat;\nOption 3:Disconnect. \n");
             while (!cancellationToken.IsCancellationRequested)
             {
                 Console.Write("Option: ");
@@ -36,8 +38,13 @@ namespace UserServiceClient
                             Console.WriteLine($"{value.DateTime}:{value.UserName} : {value.Message}");
                         }
                         break;
+                    case "3":
+                        client.UserDisconnected(new UserDisconnect { UserName = userName });
+                        cancellationToken.Cancel();
+                        break;
                 }
             }
+            
 
 
 

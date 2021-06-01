@@ -45,6 +45,8 @@ namespace UserService {
     static readonly grpc::Marshaller<global::UserService.UserRequest> __Marshaller_UserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserService.UserRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     static readonly grpc::Marshaller<global::UserService.UserResponse> __Marshaller_UserResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserService.UserResponse.Parser));
+    static readonly grpc::Marshaller<global::UserService.UserConnect> __Marshaller_UserConnect = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserService.UserConnect.Parser));
+    static readonly grpc::Marshaller<global::UserService.UserDisconnect> __Marshaller_UserDisconnect = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserService.UserDisconnect.Parser));
 
     static readonly grpc::Method<global::UserService.UserRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_AddMessage = new grpc::Method<global::UserService.UserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
@@ -59,6 +61,20 @@ namespace UserService {
         "GetUserStream",
         __Marshaller_google_protobuf_Empty,
         __Marshaller_UserResponse);
+
+    static readonly grpc::Method<global::UserService.UserConnect, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UserConnected = new grpc::Method<global::UserService.UserConnect, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UserConnected",
+        __Marshaller_UserConnect,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::UserService.UserDisconnect, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UserDisconnected = new grpc::Method<global::UserService.UserDisconnect, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UserDisconnected",
+        __Marshaller_UserDisconnect,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -76,6 +92,16 @@ namespace UserService {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::UserService.UserResponse> GetUserStream(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UserConnected(global::UserService.UserConnect request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UserDisconnected(global::UserService.UserDisconnect request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -137,6 +163,38 @@ namespace UserService {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetUserStream, null, options, request);
       }
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UserConnected(global::UserService.UserConnect request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UserConnected(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UserConnected(global::UserService.UserConnect request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UserConnected, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UserConnectedAsync(global::UserService.UserConnect request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UserConnectedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UserConnectedAsync(global::UserService.UserConnect request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UserConnected, null, options, request);
+      }
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UserDisconnected(global::UserService.UserDisconnect request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UserDisconnected(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UserDisconnected(global::UserService.UserDisconnect request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UserDisconnected, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UserDisconnectedAsync(global::UserService.UserDisconnect request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UserDisconnectedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UserDisconnectedAsync(global::UserService.UserDisconnect request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UserDisconnected, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override UserServiceAddMessageClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -150,7 +208,9 @@ namespace UserService {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_AddMessage, serviceImpl.AddMessage)
-          .AddMethod(__Method_GetUserStream, serviceImpl.GetUserStream).Build();
+          .AddMethod(__Method_GetUserStream, serviceImpl.GetUserStream)
+          .AddMethod(__Method_UserConnected, serviceImpl.UserConnected)
+          .AddMethod(__Method_UserDisconnected, serviceImpl.UserDisconnected).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -161,6 +221,8 @@ namespace UserService {
     {
       serviceBinder.AddMethod(__Method_AddMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserService.UserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.AddMessage));
       serviceBinder.AddMethod(__Method_GetUserStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::UserService.UserResponse>(serviceImpl.GetUserStream));
+      serviceBinder.AddMethod(__Method_UserConnected, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserService.UserConnect, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UserConnected));
+      serviceBinder.AddMethod(__Method_UserDisconnected, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserService.UserDisconnect, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UserDisconnected));
     }
 
   }

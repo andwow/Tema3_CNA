@@ -25,20 +25,20 @@ namespace UserService {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRQcm90b3Mvc2VydmljZS5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIigKC1Vz",
-            "ZXJSZXF1ZXN0EhkKB21lc3NhZ2UYASABKAsyCC5NZXNzYWdlIi8KDFVzZXJS",
-            "ZXNwb25zZRIfCg1saXN0T2ZNZXNzYWdlGAEgAygLMgguTWVzc2FnZSIsCgdN",
-            "ZXNzYWdlEhAKCHVzZXJOYW1lGAEgASgJEg8KB21lc3NhZ2UYAiABKAkygwEK",
-            "FVVzZXJTZXJ2aWNlQWRkTWVzc2FnZRIyCgpBZGRNZXNzYWdlEgwuVXNlclJl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSNgoNR2V0VXNlclN0cmVh",
-            "bRIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoNLlVzZXJSZXNwb25zZUIOqgIL",
-            "VXNlclNlcnZpY2ViBnByb3RvMw=="));
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIi8KC1Vz",
+            "ZXJSZXF1ZXN0EiAKB21lc3NhZ2UYASABKAsyDy5NZXNzYWdlUGF0dGVybiI2",
+            "CgxVc2VyUmVzcG9uc2USJgoNbGlzdE9mTWVzc2FnZRgBIAMoCzIPLk1lc3Nh",
+            "Z2VQYXR0ZXJuIjMKDk1lc3NhZ2VQYXR0ZXJuEhAKCHVzZXJOYW1lGAEgASgJ",
+            "Eg8KB21lc3NhZ2UYAiABKAkygwEKFVVzZXJTZXJ2aWNlQWRkTWVzc2FnZRIy",
+            "CgpBZGRNZXNzYWdlEgwuVXNlclJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
+            "RW1wdHkSNgoNR2V0VXNlclN0cmVhbRIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRoNLlVzZXJSZXNwb25zZUIOqgILVXNlclNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::UserService.UserRequest), global::UserService.UserRequest.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::UserService.UserResponse), global::UserService.UserResponse.Parser, new[]{ "ListOfMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::UserService.Message), global::UserService.Message.Parser, new[]{ "UserName", "Message_" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::UserService.MessagePattern), global::UserService.MessagePattern.Parser, new[]{ "UserName", "Message" }, null, null, null, null)
           }));
     }
     #endregion
@@ -85,9 +85,9 @@ namespace UserService {
 
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 1;
-    private global::UserService.Message message_;
+    private global::UserService.MessagePattern message_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::UserService.Message Message {
+    public global::UserService.MessagePattern Message {
       get { return message_; }
       set {
         message_ = value;
@@ -173,7 +173,7 @@ namespace UserService {
       }
       if (other.message_ != null) {
         if (message_ == null) {
-          Message = new global::UserService.Message();
+          Message = new global::UserService.MessagePattern();
         }
         Message.MergeFrom(other.Message);
       }
@@ -193,7 +193,7 @@ namespace UserService {
             break;
           case 10: {
             if (message_ == null) {
-              Message = new global::UserService.Message();
+              Message = new global::UserService.MessagePattern();
             }
             input.ReadMessage(Message);
             break;
@@ -214,7 +214,7 @@ namespace UserService {
             break;
           case 10: {
             if (message_ == null) {
-              Message = new global::UserService.Message();
+              Message = new global::UserService.MessagePattern();
             }
             input.ReadMessage(Message);
             break;
@@ -266,11 +266,11 @@ namespace UserService {
 
     /// <summary>Field number for the "listOfMessage" field.</summary>
     public const int ListOfMessageFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::UserService.Message> _repeated_listOfMessage_codec
-        = pb::FieldCodec.ForMessage(10, global::UserService.Message.Parser);
-    private readonly pbc::RepeatedField<global::UserService.Message> listOfMessage_ = new pbc::RepeatedField<global::UserService.Message>();
+    private static readonly pb::FieldCodec<global::UserService.MessagePattern> _repeated_listOfMessage_codec
+        = pb::FieldCodec.ForMessage(10, global::UserService.MessagePattern.Parser);
+    private readonly pbc::RepeatedField<global::UserService.MessagePattern> listOfMessage_ = new pbc::RepeatedField<global::UserService.MessagePattern>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::UserService.Message> ListOfMessage {
+    public pbc::RepeatedField<global::UserService.MessagePattern> ListOfMessage {
       get { return listOfMessage_; }
     }
 
@@ -387,15 +387,15 @@ namespace UserService {
 
   }
 
-  public sealed partial class Message : pb::IMessage<Message>
+  public sealed partial class MessagePattern : pb::IMessage<MessagePattern>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Message> _parser = new pb::MessageParser<Message>(() => new Message());
+    private static readonly pb::MessageParser<MessagePattern> _parser = new pb::MessageParser<MessagePattern>(() => new MessagePattern());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Message> Parser { get { return _parser; } }
+    public static pb::MessageParser<MessagePattern> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -408,22 +408,22 @@ namespace UserService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Message() {
+    public MessagePattern() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Message(Message other) : this() {
+    public MessagePattern(MessagePattern other) : this() {
       userName_ = other.userName_;
       message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Message Clone() {
-      return new Message(this);
+    public MessagePattern Clone() {
+      return new MessagePattern(this);
     }
 
     /// <summary>Field number for the "userName" field.</summary>
@@ -438,10 +438,10 @@ namespace UserService {
     }
 
     /// <summary>Field number for the "message" field.</summary>
-    public const int Message_FieldNumber = 2;
+    public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Message_ {
+    public string Message {
       get { return message_; }
       set {
         message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -450,11 +450,11 @@ namespace UserService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Message);
+      return Equals(other as MessagePattern);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Message other) {
+    public bool Equals(MessagePattern other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -462,7 +462,7 @@ namespace UserService {
         return true;
       }
       if (UserName != other.UserName) return false;
-      if (Message_ != other.Message_) return false;
+      if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -470,7 +470,7 @@ namespace UserService {
     public override int GetHashCode() {
       int hash = 1;
       if (UserName.Length != 0) hash ^= UserName.GetHashCode();
-      if (Message_.Length != 0) hash ^= Message_.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -491,9 +491,9 @@ namespace UserService {
         output.WriteRawTag(10);
         output.WriteString(UserName);
       }
-      if (Message_.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(Message_);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -508,9 +508,9 @@ namespace UserService {
         output.WriteRawTag(10);
         output.WriteString(UserName);
       }
-      if (Message_.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(Message_);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -524,8 +524,8 @@ namespace UserService {
       if (UserName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
       }
-      if (Message_.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message_);
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -534,15 +534,15 @@ namespace UserService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Message other) {
+    public void MergeFrom(MessagePattern other) {
       if (other == null) {
         return;
       }
       if (other.UserName.Length != 0) {
         UserName = other.UserName;
       }
-      if (other.Message_.Length != 0) {
-        Message_ = other.Message_;
+      if (other.Message.Length != 0) {
+        Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -563,7 +563,7 @@ namespace UserService {
             break;
           }
           case 18: {
-            Message_ = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -585,7 +585,7 @@ namespace UserService {
             break;
           }
           case 18: {
-            Message_ = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }

@@ -20,7 +20,7 @@ namespace UserServiceClient
             var message = Console.ReadLine();
             var dataStream = client.GetUserStream(new Empty());
             MessagePattern pattern = new MessagePattern { UserName = userName, Message = message };
-            client.AddMessage(new UserRequest { MessagePattern =  pattern } );
+            client.AddMessage(new UserRequest { Message =  pattern } );
             /*var cancellationToken = new CancellationTokenSource(TimeSpan.FromSeconds(10)).Token;
             try
             {

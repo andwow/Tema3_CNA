@@ -8,6 +8,9 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using Newtonsoft.Json;
 using Models;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace UserService
 {
@@ -35,8 +38,10 @@ namespace UserService
         public override Task<Empty> AddMessage(UserRequest request, ServerCallContext context)
         {
             _logger.LogInformation(root, "New message");
-            Message messageFromProto = request.Message;
-            MessagePattern message = new MessagePattern(messageFromProto.UserName, messageFromProto.Message_);
+            MessagePattern messageFromProto = request.Message;
+            MessagePattern message = new MessagePattern();//messageFromProto.UserName, messageFromProto.Message
+            message.UserName = messageFromProto.UserName;
+            message.Message = messageFromProto.Message;
             array.Add(JToken.Parse(JsonConvert.SerializeObject(message, Formatting.Indented)));
             Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
             serializer.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
@@ -49,9 +54,21 @@ namespace UserService
             }
             return Task.FromResult(new Empty());
         }
-        public override Task<UserResponse> GetUserStream(UserResponse userResponse, ServerCallContext context)
+        public override Task<UserResponse> GetUserStream(Empty _, ServerCallContext context)
         {
-            return new UserResponse();
+            UserResponse userResponse = new UserResponse();
+            for (int index = 0; index < array.Count(); ++index)
+            {
+                string userNameString = array[index]["UserName"].ToString();
+                string messageString = array[index]["Message"].ToString();
+                MessagePattern message = new MessagePattern
+                {
+                    UserName = userNameString,
+                    Message = messageString
+                };
+                userResponse.ListOfMessage.Add(message);
+            }
+            return Task.FromResult(userResponse);
         }
         
     }

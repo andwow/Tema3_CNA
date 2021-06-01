@@ -11,14 +11,14 @@ service UserServiceAddMessage{
 }
 
 message UserRequest{
-	Message message = 1;
+	MessagePattern message = 1;
 }
 
 message UserResponse{
-	repeated Message listOfMessage = 1;
+	repeated MessagePattern listOfMessage = 1;
 }
 
-message Message{
+message MessagePattern{
 	string userName = 1;
 	string message = 2;
 }

@@ -11,7 +11,7 @@ service UserServiceAddMessage{
 }
 
 message UserRequest{
-	MessagePattern messagePattern = 1;
+	MessagePattern message = 1;
 }
 
 message UserResponse{

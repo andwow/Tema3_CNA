@@ -16,8 +16,6 @@ namespace UserServiceClient
             var client = new UserServiceAddMessage.UserServiceAddMessageClient(channel);
             Console.Write("Username: ");
             var userName = Console.ReadLine();
-            
-            
             var cancellationToken = new CancellationTokenSource(Timeout.Infinite);
             while (!cancellationToken.IsCancellationRequested)
             {
@@ -28,11 +26,15 @@ namespace UserServiceClient
                     case "1":
                         Console.Write("Message: ");
                         var message = Console.ReadLine();
-                        var dataStream = client.GetUserStream(new Empty());
                         MessagePattern pattern = new MessagePattern { UserName = userName, Message = message };
                         client.AddMessage(new UserRequest { Message = pattern });
                         break;
                     case "2":
+                        var dataStream = client.GetUserStream(new Empty());
+                        foreach (var value in dataStream.ListOfMessage)
+                        {
+                            Console.WriteLine($"{value.UserName} : {value.Message}");
+                        }
                         break;
                 }
             }

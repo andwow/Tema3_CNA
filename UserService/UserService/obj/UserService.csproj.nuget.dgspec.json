@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Facultate\\CNA\\Tema3\\Tema3_CNA\\UserService\\UserService\\UserService.csproj": {}
+    "E:\\repos\\CNA\\tema3CNA\\Tema3_CNA\\UserService\\UserService\\UserService.csproj": {}
   },
   "projects": {
-    "F:\\Facultate\\CNA\\Tema3\\Tema3_CNA\\UserService\\UserService\\UserService.csproj": {
+    "E:\\repos\\CNA\\tema3CNA\\Tema3_CNA\\UserService\\UserService\\UserService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Facultate\\CNA\\Tema3\\Tema3_CNA\\UserService\\UserService\\UserService.csproj",
+        "projectUniqueName": "E:\\repos\\CNA\\tema3CNA\\Tema3_CNA\\UserService\\UserService\\UserService.csproj",
         "projectName": "UserService",
-        "projectPath": "F:\\Facultate\\CNA\\Tema3\\Tema3_CNA\\UserService\\UserService\\UserService.csproj",
-        "packagesPath": "C:\\Users\\bumbl\\.nuget\\packages\\",
-        "outputPath": "F:\\Facultate\\CNA\\Tema3\\Tema3_CNA\\UserService\\UserService\\obj\\",
+        "projectPath": "E:\\repos\\CNA\\tema3CNA\\Tema3_CNA\\UserService\\UserService\\UserService.csproj",
+        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
+        "outputPath": "E:\\repos\\CNA\\tema3CNA\\Tema3_CNA\\UserService\\UserService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bumbl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

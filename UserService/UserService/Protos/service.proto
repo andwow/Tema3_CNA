@@ -8,6 +8,8 @@ import "google/protobuf/timestamp.proto";
 service UserServiceAddMessage{
 	rpc AddMessage (UserRequest) returns (google.protobuf.Empty);
 	rpc GetUserStream (google.protobuf.Empty) returns (UserResponse);
+	rpc UserConnected (UserConnect) returns (google.protobuf.Empty);
+	rpc UserDisconnected (UserDisconnect) returns (google.protobuf.Empty);
 }
 
 message UserRequest{
@@ -16,6 +18,13 @@ message UserRequest{
 
 message UserResponse{
 	repeated MessagePattern listOfMessage = 1;
+}
+message UserConnect{
+	string userName = 1;
+}
+
+message UserDisconnect{
+	string userName = 1;
 }
 
 message MessagePattern{

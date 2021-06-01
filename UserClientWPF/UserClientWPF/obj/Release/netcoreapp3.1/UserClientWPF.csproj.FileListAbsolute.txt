@@ -25,3 +25,11 @@ D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\UserClientWPF
 D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\UserClientWPF.dll
 D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\UserClientWPF.pdb
 D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\UserClientWPF.genruntimeconfig.cache
+E:\repos\CNA\Tema3_CNA-main\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\UserClientWPF.csprojAssemblyReference.cache
+E:\repos\CNA\Tema3_CNA-main\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\Chat.g.cs
+E:\repos\CNA\Tema3_CNA-main\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\MainWindow.g.cs
+E:\repos\CNA\Tema3_CNA-main\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\App.g.cs
+E:\repos\CNA\Tema3_CNA-main\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\UserClientWPF_MarkupCompile.cache
+E:\repos\CNA\Tema3_CNA-main\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\UserClientWPF_MarkupCompile.lref
+E:\repos\CNA\Tema3_CNA-main\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\UserClientWPF.dll
+E:\repos\CNA\Tema3_CNA-main\UserClientWPF\UserClientWPF\obj\Release\netcoreapp3.1\UserClientWPF.pdb

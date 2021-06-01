@@ -23,6 +23,9 @@ namespace UserServiceClient
                 var option = Console.ReadLine();
                 switch (option)
                 {
+                    default:
+                        Console.Write("Invalid option please insert a valid option.\n");
+                        break;
                     case "1":
                         Console.Write("Message: ");
                         var message = Console.ReadLine();

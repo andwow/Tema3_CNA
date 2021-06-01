@@ -19,7 +19,6 @@ message UserResponse{
 }
 
 message MessagePattern{
-	string dateTime = 1;
-	string userName = 2;
-	string message = 3;
+	string userName = 1;
+	string message = 2;
 }

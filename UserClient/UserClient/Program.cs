@@ -36,33 +36,11 @@ namespace UserServiceClient
                         var dataStream = client.GetUserStream(new Empty());
                         foreach (var value in dataStream.ListOfMessage)
                         {
-                            Console.WriteLine($"{value.DateTime}: {value.UserName} : {value.Message}");
+                            Console.WriteLine($"{value.UserName} : {value.Message}");
                         }
                         break;
                 }
             }
-
-
-
-            //Console.Clear();
-            //while (!cancellationToken.IsCancellationRequested)
-            //{
-            //    //Console.Write("Username: "+ userName + "\n\n\n\n\n" );
-            //    Console.Write("Message: ");
-            //    var message = Console.ReadLine();
-            //    MessagePattern pattern = new MessagePattern { UserName = userName, Message = message };
-            //    client.AddMessage(new UserRequest { Message = pattern });
-            //    Console.Clear();
-            //    var dataStream = client.GetUserStream(new Empty());
-            //    Console.Write("Username: " + userName + "\n\n\n\n\n");
-
-            //    foreach (var value in dataStream.ListOfMessage)
-            //    {
-            //        Console.WriteLine($"{value.DateTime}:{value.UserName} : {value.Message}" );
-            //    }
-
-            //    Console.WriteLine("\n\n\n\n\n");
-            //}
         }
     }
 }

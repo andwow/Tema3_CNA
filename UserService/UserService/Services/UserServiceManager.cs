@@ -42,7 +42,6 @@ namespace UserService
             MessagePattern message = new MessagePattern();//messageFromProto.UserName, messageFromProto.Message
             message.UserName = messageFromProto.UserName;
             message.Message = messageFromProto.Message;
-            message.DateTime = DateTime.Now.ToLongTimeString();
             array.Add(JToken.Parse(JsonConvert.SerializeObject(message, Formatting.Indented)));
             Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
             serializer.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
@@ -62,12 +61,10 @@ namespace UserService
             {
                 string userNameString = array[index]["UserName"].ToString();
                 string messageString = array[index]["Message"].ToString();
-                string dateTime = array[index]["DateTime"].ToString();
                 MessagePattern message = new MessagePattern
                 {
                     UserName = userNameString,
-                    Message = messageString,
-                    DateTime = dateTime
+                    Message = messageString
                 };
                 userResponse.ListOfMessage.Add(message);
             }

@@ -33,7 +33,7 @@ namespace UserServiceClient
                         var dataStream = client.GetUserStream(new Empty());
                         foreach (var value in dataStream.ListOfMessage)
                         {
-                            Console.WriteLine($"{value.DateTime}:{value.UserName} : {value.Message}");
+                            Console.WriteLine($"{value.DateTime}: {value.UserName} : {value.Message}");
                         }
                         break;
                 }

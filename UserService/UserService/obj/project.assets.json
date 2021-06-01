@@ -6134,11 +6134,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Stefan\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Andrei\\.nuget\\packages\\": {}
+>>>>>>> 6ab796ac4493d3553538493d4e893507fad44170
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "E:\\repos\\CNA\\tema3CNA\\Tema3_CNA\\UserService\\UserService\\UserService.csproj",
       "projectName": "UserService",
       "projectPath": "E:\\repos\\CNA\\tema3CNA\\Tema3_CNA\\UserService\\UserService\\UserService.csproj",
@@ -6147,6 +6152,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "D:\\Tema3_CNA\\UserService\\UserService\\UserService.csproj",
+      "projectName": "UserService",
+      "projectPath": "D:\\Tema3_CNA\\UserService\\UserService\\UserService.csproj",
+      "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
+      "outputPath": "D:\\Tema3_CNA\\UserService\\UserService\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 6ab796ac4493d3553538493d4e893507fad44170
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6219,7 +6234,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+>>>>>>> 6ab796ac4493d3553538493d4e893507fad44170
       }
     }
   },

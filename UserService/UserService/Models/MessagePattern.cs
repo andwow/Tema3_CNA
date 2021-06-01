@@ -4,10 +4,12 @@ namespace Models
     {
         private string userName;
         private string message;
-        public MessagePattern(string userName, string message)
+        private string dateTime;
+        public MessagePattern(string userName, string message, string dateTime)
         {
             this.userName = userName;
             this.message = message;
+            this.dateTime = dateTime;
         }
         public string Message
         {
@@ -19,6 +21,7 @@ namespace Models
             {
                 return message;
             }
+
         }
         public string UserName
         {
@@ -31,6 +34,16 @@ namespace Models
                 return userName;
             }
         }
-       
+        public string DateTime
+        {
+            set
+            {
+                dateTime = value;
+            }
+            get
+            {
+                return dateTime;
+            }
+        }
     }
 }

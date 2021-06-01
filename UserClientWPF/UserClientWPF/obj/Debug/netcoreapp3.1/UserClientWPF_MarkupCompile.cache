@@ -5,16 +5,16 @@ winexe
 C#
 .cs
 D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Debug\netcoreapp3.1\
-UserClientWPF_lpcevifv_wpftmp
+UserClientWPF
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\Tema3_CNA\UserClientWPF\UserClientWPF\App.xaml
-11407045341
+3-302043923
 
-564103906
+4-1190806304
 197556953262
-MainWindow.xaml;
+.xaml;Chat.xaml;MainWindow.xaml;
 
 True
 

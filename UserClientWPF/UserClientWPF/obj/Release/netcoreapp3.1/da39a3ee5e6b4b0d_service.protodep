@@ -1,0 +1,4 @@
+obj\Release\netcoreapp3.1/Service.cs \
+obj\Release\netcoreapp3.1/ServiceGrpc.cs: C:/Users/Andrei/.nuget/packages/grpc.tools/2.38.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/Andrei/.nuget/packages/grpc.tools/2.38.0/build/native/include/google/protobuf/timestamp.proto\
+ service.proto

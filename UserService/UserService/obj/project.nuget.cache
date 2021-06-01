@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RMbBRxFlRQ2dRn3f4a8NMRROMAB06YUYYVOZ6qjuxJyn+h6trw8pa9668CgFmF0vHSwQLL25SzDIG/nyZ5tUVw==",
+  "dgSpecHash": "aLc/5vSlveDW+y3mvtwpwOJOU18FiqKf9+hCGVW51/9xZ3YrAxtJmVwlA7ryB0Rap2rBKb7h0c82++5cnowieQ==",
   "success": true,
   "projectFilePath": "D:\\Tema3_CNA\\UserService\\UserService\\UserService.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,7 @@
     "C:\\Users\\Andrei\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Andrei\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\Andrei\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
+    "C:\\Users\\Andrei\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
     "C:\\Users\\Andrei\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Andrei\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
     "C:\\Users\\Andrei\\.nuget\\packages\\system.console\\4.0.0\\system.console.4.0.0.nupkg.sha512",

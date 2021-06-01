@@ -7,15 +7,18 @@ import "google/protobuf/timestamp.proto";
 
 service UserServiceAddMessage{
 	rpc AddMessage (UserRequest) returns (google.protobuf.Empty);
-	rpc GetUserStream (google.protobuf.Empty) returns (stream UserResponse);
+	rpc GetUserStream (google.protobuf.Empty) returns (UserResponse);
 }
 
 message UserRequest{
-	string userName = 1;
-	string message = 2;
+	Message message = 1;
 }
 
 message UserResponse{
+	repeated Message listOfMessage = 1;
+}
+
+message Message{
 	string userName = 1;
 	string message = 2;
 }

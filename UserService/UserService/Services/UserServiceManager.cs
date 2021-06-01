@@ -34,8 +34,9 @@ namespace UserService
         }
         public override Task<Empty> AddMessage(UserRequest request, ServerCallContext context)
         {
-            //_logger.LogInformation(root, messages);
-            MessagePattern message = new MessagePattern(request.UserName, request.Message);
+            _logger.LogInformation(root, "New message");
+            Message messageFromProto = request.Message;
+            MessagePattern message = new MessagePattern(messageFromProto.UserName, messageFromProto.Message_);
             array.Add(JToken.Parse(JsonConvert.SerializeObject(message, Formatting.Indented)));
             Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
             serializer.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
@@ -48,29 +49,9 @@ namespace UserService
             }
             return Task.FromResult(new Empty());
         }
-        public override async Task GetUserStream(Empty _, IServerStreamWriter<UserResponse> responseStream, ServerCallContext context)
+        public override Task<UserResponse> GetUserStream(UserResponse userResponse, ServerCallContext context)
         {
-            Random random = new Random();
-
-            try
-            {
-                while (!context.CancellationToken.IsCancellationRequested)
-                {
-                    await Task.Delay(2000);
-
-                    var weatherData = new UserResponse()
-                    {
-                        UserName = "dasd",
-                        Message = "dsaas"
-                    };
-
-                    await responseStream.WriteAsync(weatherData);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("\n" + e.Message + "\n");
-            }
+            return new UserResponse();
         }
         
     }

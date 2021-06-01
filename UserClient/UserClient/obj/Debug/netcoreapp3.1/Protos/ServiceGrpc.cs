@@ -54,7 +54,7 @@ namespace UserService {
         __Marshaller_google_protobuf_Empty);
 
     static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::UserService.UserResponse> __Method_GetUserStream = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::UserService.UserResponse>(
-        grpc::MethodType.ServerStreaming,
+        grpc::MethodType.Unary,
         __ServiceName,
         "GetUserStream",
         __Marshaller_google_protobuf_Empty,
@@ -75,7 +75,7 @@ namespace UserService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task GetUserStream(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::IServerStreamWriter<global::UserService.UserResponse> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::UserService.UserResponse> GetUserStream(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -121,13 +121,21 @@ namespace UserService {
       {
         return CallInvoker.AsyncUnaryCall(__Method_AddMessage, null, options, request);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::UserService.UserResponse> GetUserStream(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::UserService.UserResponse GetUserStream(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUserStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::UserService.UserResponse> GetUserStream(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
+      public virtual global::UserService.UserResponse GetUserStream(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncServerStreamingCall(__Method_GetUserStream, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserStream, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::UserService.UserResponse> GetUserStreamAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::UserService.UserResponse> GetUserStreamAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserStream, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override UserServiceAddMessageClient NewInstance(ClientBaseConfiguration configuration)
@@ -152,7 +160,7 @@ namespace UserService {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, UserServiceAddMessageBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_AddMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserService.UserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.AddMessage));
-      serviceBinder.AddMethod(__Method_GetUserStream, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::UserService.UserResponse>(serviceImpl.GetUserStream));
+      serviceBinder.AddMethod(__Method_GetUserStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::UserService.UserResponse>(serviceImpl.GetUserStream));
     }
 
   }

@@ -16,3 +16,4 @@ D:\Tema3_CNA\UserClient\UserClient\obj\Debug\netcoreapp3.1\UserClient.csproj.Cop
 D:\Tema3_CNA\UserClient\UserClient\obj\Debug\netcoreapp3.1\UserClient.dll
 D:\Tema3_CNA\UserClient\UserClient\obj\Debug\netcoreapp3.1\UserClient.pdb
 D:\Tema3_CNA\UserClient\UserClient\obj\Debug\netcoreapp3.1\UserClient.genruntimeconfig.cache
+D:\Tema3_CNA\UserClient\UserClient\obj\Debug\netcoreapp3.1\UserClient.csprojAssemblyReference.cache

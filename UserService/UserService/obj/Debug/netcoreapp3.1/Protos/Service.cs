@@ -24,18 +24,19 @@ namespace UserService {
     static ServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRQcm90b3Mvc2VydmljZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90byIwCgtVc2VyUmVxdWVzdBIQCgh1c2VyTmFtZRgBIAEoCRIP",
-            "CgdtZXNzYWdlGAIgASgJImQKDFVzZXJSZXNwb25zZRIxCg1kYXRlVGltZVN0",
-            "YW1wGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCgh1c2Vy",
-            "TmFtZRgCIAEoCRIPCgdtZXNzYWdlGAMgASgJMkcKFVVzZXJTZXJ2aWNlQWRk",
-            "TWVzc2FnZRIuCg1HZXRVc2VyU3RyZWFtEgwuVXNlclJlcXVlc3QaDS5Vc2Vy",
-            "UmVzcG9uc2UwAUIOqgILVXNlclNlcnZpY2ViBnByb3RvMw=="));
+            "ChRQcm90b3Mvc2VydmljZS5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIjAKC1Vz",
+            "ZXJSZXF1ZXN0EhAKCHVzZXJOYW1lGAEgASgJEg8KB21lc3NhZ2UYAiABKAki",
+            "MQoMVXNlclJlc3BvbnNlEhAKCHVzZXJOYW1lGAEgASgJEg8KB21lc3NhZ2UY",
+            "AiABKAkyhQEKFVVzZXJTZXJ2aWNlQWRkTWVzc2FnZRIyCgpBZGRNZXNzYWdl",
+            "EgwuVXNlclJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSOAoNR2V0",
+            "VXNlclN0cmVhbRIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoNLlVzZXJSZXNw",
+            "b25zZTABQg6qAgtVc2VyU2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::UserService.UserRequest), global::UserService.UserRequest.Parser, new[]{ "UserName", "Message" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::UserService.UserResponse), global::UserService.UserResponse.Parser, new[]{ "DateTimeStamp", "UserName", "Message" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::UserService.UserResponse), global::UserService.UserResponse.Parser, new[]{ "UserName", "Message" }, null, null, null, null)
           }));
     }
     #endregion
@@ -279,7 +280,6 @@ namespace UserService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UserResponse(UserResponse other) : this() {
-      dateTimeStamp_ = other.dateTimeStamp_ != null ? other.dateTimeStamp_.Clone() : null;
       userName_ = other.userName_;
       message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -290,19 +290,8 @@ namespace UserService {
       return new UserResponse(this);
     }
 
-    /// <summary>Field number for the "dateTimeStamp" field.</summary>
-    public const int DateTimeStampFieldNumber = 1;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp dateTimeStamp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp DateTimeStamp {
-      get { return dateTimeStamp_; }
-      set {
-        dateTimeStamp_ = value;
-      }
-    }
-
     /// <summary>Field number for the "userName" field.</summary>
-    public const int UserNameFieldNumber = 2;
+    public const int UserNameFieldNumber = 1;
     private string userName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserName {
@@ -313,7 +302,7 @@ namespace UserService {
     }
 
     /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 3;
+    public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
@@ -336,7 +325,6 @@ namespace UserService {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(DateTimeStamp, other.DateTimeStamp)) return false;
       if (UserName != other.UserName) return false;
       if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -345,7 +333,6 @@ namespace UserService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (dateTimeStamp_ != null) hash ^= DateTimeStamp.GetHashCode();
       if (UserName.Length != 0) hash ^= UserName.GetHashCode();
       if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
@@ -364,16 +351,12 @@ namespace UserService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (dateTimeStamp_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(DateTimeStamp);
-      }
       if (UserName.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserName);
       }
       if (Message.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteString(Message);
       }
       if (_unknownFields != null) {
@@ -385,16 +368,12 @@ namespace UserService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (dateTimeStamp_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(DateTimeStamp);
-      }
       if (UserName.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(UserName);
       }
       if (Message.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteString(Message);
       }
       if (_unknownFields != null) {
@@ -406,9 +385,6 @@ namespace UserService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (dateTimeStamp_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateTimeStamp);
-      }
       if (UserName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
       }
@@ -425,12 +401,6 @@ namespace UserService {
     public void MergeFrom(UserResponse other) {
       if (other == null) {
         return;
-      }
-      if (other.dateTimeStamp_ != null) {
-        if (dateTimeStamp_ == null) {
-          DateTimeStamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        DateTimeStamp.MergeFrom(other.DateTimeStamp);
       }
       if (other.UserName.Length != 0) {
         UserName = other.UserName;
@@ -453,17 +423,10 @@ namespace UserService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (dateTimeStamp_ == null) {
-              DateTimeStamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(DateTimeStamp);
-            break;
-          }
-          case 18: {
             UserName = input.ReadString();
             break;
           }
-          case 26: {
+          case 18: {
             Message = input.ReadString();
             break;
           }
@@ -482,17 +445,10 @@ namespace UserService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (dateTimeStamp_ == null) {
-              DateTimeStamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(DateTimeStamp);
-            break;
-          }
-          case 18: {
             UserName = input.ReadString();
             break;
           }
-          case 26: {
+          case 18: {
             Message = input.ReadString();
             break;
           }

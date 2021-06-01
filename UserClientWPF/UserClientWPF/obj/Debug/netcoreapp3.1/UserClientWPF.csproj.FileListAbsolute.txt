@@ -1,0 +1,5 @@
+D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Debug\netcoreapp3.1\UserClientWPF.csprojAssemblyReference.cache
+D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Debug\netcoreapp3.1\App.g.cs
+D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Debug\netcoreapp3.1\UserClientWPF_MarkupCompile.cache
+D:\Tema3_CNA\UserClientWPF\UserClientWPF\obj\Debug\netcoreapp3.1\UserClientWPF_MarkupCompile.lref

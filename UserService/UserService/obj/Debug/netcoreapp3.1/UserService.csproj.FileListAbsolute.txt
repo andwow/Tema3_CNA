@@ -60,3 +60,4 @@ D:\Tema3_CNA\UserService\UserService\bin\Debug\netcoreapp3.1\runtimes\win-x64\na
 D:\Tema3_CNA\UserService\UserService\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Azure.Cosmos.ServiceInterop.dll
 D:\Tema3_CNA\UserService\UserService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Tema3_CNA\UserService\UserService\obj\Debug\netcoreapp3.1\UserService.csprojAssemblyReference.cache
+D:\Tema3_CNA\UserService\UserService\bin\Debug\netcoreapp3.1\Resources\messages.json

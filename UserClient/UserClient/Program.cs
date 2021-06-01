@@ -10,7 +10,7 @@ namespace UserServiceClient
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new UserServiceAddMessage.UserServiceAddMessageClient(channel);
@@ -18,11 +18,12 @@ namespace UserServiceClient
             var userName = Console.ReadLine();
             Console.Write("Message: ");
             var message = Console.ReadLine();
-            var response = client.GetUserStream(new UserRequest { UserName = userName, Message = message});
-            var cancellationToken = new CancellationTokenSource(TimeSpan.FromSeconds(10)).Token;
+            var dataStream = client.GetUserStream(new Empty());
+            client.AddMessage(new UserRequest { UserName = userName, Message = message });
+            /*var cancellationToken = new CancellationTokenSource(TimeSpan.FromSeconds(10)).Token;
             try
             {
-                await foreach (var weatherData in response.ResponseStream.ReadAllAsync(cancellationToken))
+                await foreach (var weatherData in dataStream.ResponseStream.ReadAllAsync(cancellationToken))
                 {
                     Console.WriteLine(weatherData.UserName + " : " + weatherData.Message);
                 }
@@ -30,7 +31,7 @@ namespace UserServiceClient
             catch (RpcException e) when (e.StatusCode == StatusCode.Cancelled)
             {
                 Console.WriteLine("Stream cancelled by client.");
-            }
+            }*/
         }
     }
 }
